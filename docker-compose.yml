@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # The Python/Flask Backend Service
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=1
+      - DATABASE_URL=postgresql://user:password@db:5432/careercompass_db
+    depends_on:
+      - db
+
+  # The React Frontend Service
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  # The PostgreSQL Database Service
+  db:
+    image: postgres:14-alpine
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=careercompass_db
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
