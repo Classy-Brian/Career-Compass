@@ -25,7 +25,7 @@ Used if you are running the frontend or backend manually, without Docker.
 | :--- | :--- |
 | `npm run dev` | Starts the React frontend development server. Run this from the `frontend/` directory. |
 | `source .venv/bin/activate` | Activates the Python virtual environment on macOS/Linux. Run from the `backend/` directory. |
-| `.\.venv\Scripts\activate`| Activates the Python virtual environment on Windows. Run from the `backend/` directory. |
+| `source .venv/Scripts/activate`| Activates the Python virtual environment on Windows. Run from the `backend/` directory. |
 | `flask run` | Starts the Python backend server. Run from the `backend/` directory with the virtual environment active. |
 
 ---
