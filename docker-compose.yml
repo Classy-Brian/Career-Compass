@@ -9,7 +9,7 @@ services:
     volumes:
       - ./backend:/app
     environment:
-      - FLASK_APP=app.py
+      - FLASK_APP=run.py
       - FLASK_DEBUG=1
       - DATABASE_URL=postgresql://user:password@db:5432/careercompass_db
     depends_on:
