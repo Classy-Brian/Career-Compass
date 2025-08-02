@@ -7,12 +7,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency folders
 node_modules
+
+# Build output
 dist
 dist-ssr
+.vite
+
+# Environment variables
+.env
+.env.*.local
 *.local
 
-# Editor directories and files
+# Editor junk
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +30,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# OS trash
+Thumbs.db
+ehthumbs.db
+
+# Docker (optional)
+.dockerignore
+docker-compose.override.yml
+
+package-lock.json
+package.json

@@ -1,10 +1,19 @@
 import React from 'react';
-import HomePage from './pages/HomePage';
-import Homepage from './pages/HomePage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainLayout from './layout/MainLayout';
+import DashboardPage from './pages/DashboardPage';
+import ResumeCheckerPage from './pages/ResumeCheckerPage';
 
 function App() {
   return (
-    <Homepage />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="resume-checker" element={<ResumeCheckerPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
