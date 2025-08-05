@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    height: 100vh; /* ensures full viewport height */
+    background: linear-gradient(to bottom, rgb(77, 71, 247), rgb(12, 7, 147));
+    display: flex;
+    justify-content: center; /* center content horizontally */
+    align-items: center;     /* center content vertically */
+    font-family: Arial, sans-serif; /* optional: makes text cleaner */
+}

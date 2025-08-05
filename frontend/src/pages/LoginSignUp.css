@@ -1,0 +1,179 @@
+/* FIXED: Remove the dot before body */
+body {
+    background: linear-gradient(rgb(77, 71, 247), rgb(12, 7, 147));
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text {
+    color: rgb(12, 7, 147);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline {
+    width: 61px;
+    height: 6px;
+    background: rgb(12, 7, 147);
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input img {
+    margin: 0px 30px;
+}
+
+.input input {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+}
+
+.forgot-password {
+    padding-left: 70px;
+    margin-top: 27px;
+    color: #282727;
+    font-size: 18px;
+}
+
+.forgot-password span {
+    color: rgb(12, 7, 147);
+    cursor: pointer;
+}
+
+.submit-container {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #676767;
+    background-color: #EAEAEA;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.gray {
+    background: rgb(12, 7, 147);
+    color: #ffffff;
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 10px 30px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+}
+
+/* Disabled input styling */
+.input input:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Submit button styling */
+.actual-submit {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.submit-button {
+    background: linear-gradient(270deg, #005C98, #339DFF);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: linear-gradient(270deg, #004080, #2085E6);
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading state for existing submit buttons */
+.submit.loading {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Form styling improvements */
+form {
+    width: 100%;
+}
+
+/* Make sure inputs have proper names for form handling */
+.input input {
+    transition: all 0.3s ease;
+}
+
+.input input:focus {
+    outline: none;
+    border: 2px solid #339DFF;
+    box-shadow: 0 0 5px rgba(51, 157, 255, 0.3);
+}
