@@ -14,6 +14,7 @@ export default function MainLayout() {
           <Link to="/resume-checker" style={{ marginRight: '1rem' }}>Resume Checker </Link>
           <Link to="chatbot" style={{ marginRight: '1rem' }} >Chatbot </Link>
           <Link to="careerpath" style={{ marginRight: '1rem' }} >Careerpath </Link>
+          <Link to="login-signup" style={{ marginRight: '1rem' }} >Login-Signup </Link>
         </nav>
       </header>
 

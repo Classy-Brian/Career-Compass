@@ -12,6 +12,7 @@ function HomePage() {
           <li><Link to="/resume-checker">Resume Checker</Link></li>
           <li><Link to="/chatbot">Chatbot</Link></li>
           <li><Link to="/careerpath">Careerpath</Link></li>
+          <li><Link to="/login-signup">Login SignUp</Link></li>
         </ul>
       </nav>
     </div>
