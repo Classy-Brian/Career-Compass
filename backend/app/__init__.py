@@ -21,4 +21,7 @@ def create_app(config_class=Config):
     migrate.init_app(app, db)
     bcrypt.init_app(app)
 
+    from app.routes.planner_routes import planner_bp
+    app.register_blueprint(planner_bp)
+
     return app
