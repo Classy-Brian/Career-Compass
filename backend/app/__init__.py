@@ -3,6 +3,8 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt
+from flask_cors import CORS
+
 from app.routes.routes import api
 
 
@@ -15,6 +17,8 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
     app.register_blueprint(api,url_prefic='/api')
+
+    CORS(app)
 
     # Initialize extensions with the app
     db.init_app(app)
